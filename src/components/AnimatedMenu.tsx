@@ -107,11 +107,11 @@ export default function AnimatedMenu() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-red-50">
       <Header />
-      <div className="pt-24 pb-16">
+      <div className="pt-24 pb-16 px-4 sm:px-6 md:px-8">
         {selectedItem && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedItem(null)}>
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setSelectedItem(null)}>
           <div className="relative max-w-4xl w-full bg-white rounded-lg overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="relative h-[400px] md:h-[500px]">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px]">
               <Image
                 src={selectedItem.image || ''}
                 alt={selectedItem.name}
@@ -140,14 +140,14 @@ export default function AnimatedMenu() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F47AF]">¡Buen Provecho!</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#0F47AF]">¡Buen Provecho!</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Experience the authentic flavors of Puerto Rico with our signature dishes.
           </p>
         </motion.div>
 
         <div className="space-y-32">
-          <h2 className="text-4xl font-bold text-center text-[#0F47AF] mb-16">Full Menu</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0F47AF] mb-8 sm:mb-16">Full Menu</h2>
           {['Appetizers', 'Main Dishes', 'Sides'].map((category) => (
             <motion.div
               key={category}
@@ -156,10 +156,10 @@ export default function AnimatedMenu() {
               transition={{ duration: 0.8 }}
             >
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-4 text-[#E41F1D]">{category}</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#E41F1D]">{category}</h2>
                 <div className="w-24 h-1 bg-[#E41F1D] mx-auto"></div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {menuItems
                   .filter((item) => item.category === category)
                   .map((item) => (
@@ -171,7 +171,7 @@ export default function AnimatedMenu() {
                       onClick={() => setSelectedItem(item)}
                     >
                       {item.image && (
-                        <div className="relative h-48">
+                        <div className="relative h-40 sm:h-48">
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -180,10 +180,10 @@ export default function AnimatedMenu() {
                           />
                         </div>
                       )}
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold mb-2">{item.name}</h3>
+                      <div className="p-4 sm:p-6">
+                        <h3 className="text-lg sm:text-xl font-bold mb-2">{item.name}</h3>
                         <p className="text-gray-600 mb-2">{item.description}</p>
-                        <p className="text-lg font-bold text-[#E41F1D]">{item.price}</p>
+                        <p className="text-base sm:text-lg font-bold text-[#E41F1D]">{item.price}</p>
                       </div>
                     </motion.div>
                   ))}

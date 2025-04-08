@@ -92,22 +92,22 @@ export default function AnimatedHome() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex items-center justify-center gap-4 mb-8 text-xl"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-base sm:text-xl px-4 sm:px-0"
             >
               <Link
                 href="https://maps.apple.com/?address=1016+Lafayette+Blvd,+Fredericksburg,+VA+22401"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#0F47AF] transition-colors"
+                className="flex items-center gap-2 hover:text-[#0F47AF] transition-colors text-center sm:text-left"
               >
-                <FaMapMarkerAlt className="text-2xl" />
-                <span>1016 Lafayette Blvd, Fredericksburg, VA 22401</span>
+                <FaMapMarkerAlt className="text-xl sm:text-2xl flex-shrink-0" />
+                <span className="leading-tight">1016 Lafayette Blvd,<br className="sm:hidden" /> Fredericksburg, VA 22401</span>
               </Link>
               <Link
                 href="tel:+15401234567"
-                className="flex items-center gap-2 hover:text-[#0F47AF] transition-colors ml-4"
+                className="flex items-center gap-2 hover:text-[#0F47AF] transition-colors sm:ml-4"
               >
-                <FaPhone className="text-2xl" />
+                <FaPhone className="text-xl sm:text-2xl flex-shrink-0" />
                 <span>(540) 123-4567</span>
               </Link>
             </motion.div>
@@ -124,17 +124,17 @@ export default function AnimatedHome() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6 sm:px-0"
             >
               <Link
                 href="/menu"
-                className="bg-[#E41F1D] text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors"
+                className="w-full sm:w-auto bg-[#E41F1D] text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors text-center"
               >
                 View Menu
               </Link>
               <Link
                 href="/contact"
-                className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                className="w-full sm:w-auto bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Book Now
               </Link>
@@ -147,7 +147,7 @@ export default function AnimatedHome() {
       {/* Featured Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 mt-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 mt-24 px-4 sm:px-6 md:px-0">
             <div className="text-center">
               <div className="relative h-[300px] mb-6 rounded-lg overflow-hidden shadow-lg">
                 <Image

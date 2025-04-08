@@ -12,7 +12,7 @@ const AnimatedAbout: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-red-50">
       <Header />
 
-      <div className="pt-24 pb-16">
+      <div className="pt-24 pb-16 px-4 sm:px-6 md:px-8">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -20,19 +20,19 @@ const AnimatedAbout: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F47AF]">Our Story</h1>
-            <p className="text-gray-800 max-w-3xl mx-auto text-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#0F47AF]">Our Story</h1>
+            <p className="text-gray-800 max-w-3xl mx-auto text-base sm:text-lg">
               Welcome to Hit The Spot Kitchen, where we bring the authentic flavors of Puerto Rico to Fredericksburg, VA.
             </p>
           </motion.div>
 
           {/* Chef's Story Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-20">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative h-[400px] rounded-lg overflow-hidden shadow-lg"
+              className="relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg"
             >
               <Image
                 src="/chefwill.jpg"
@@ -48,7 +48,7 @@ const AnimatedAbout: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col justify-center"
             >
-              <h2 className="text-3xl font-bold mb-6 text-[#0F47AF]">Meet Chef Will</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-[#0F47AF]">Meet Chef Will</h2>
               <p className="text-gray-800 mb-4">
                 Growing up in a Puerto Rican family, Chef Will developed a deep love for his culinary heritage. Together with his wife, their shared passion for authentic Puerto Rican flavors and family recipes led to the creation of Hit The Spot Kitchen.
               </p>
@@ -65,32 +65,32 @@ const AnimatedAbout: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mb-20"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center text-[#0F47AF]">What People Say</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-[#0F47AF]">What People Say</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-6 bg-white rounded-lg shadow-md">
+              <div className="p-4 sm:p-6 bg-white rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-yellow-400 text-sm sm:text-base">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                   <span className="ml-2 text-gray-600">5.0</span>
                 </div>
-                <p className="italic text-gray-800 mb-4">
+                <p className="italic text-gray-800 mb-4 text-sm sm:text-base">
                   &quot;The most authentic Puerto Rican food I&apos;ve had outside of the island. The mofongo is incredible!&quot;
                 </p>
                 <p className="text-sm text-gray-600">- Maria R.</p>
               </div>
-              <div className="p-6 bg-white rounded-lg shadow-md">
+              <div className="p-4 sm:p-6 bg-white rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-yellow-400 text-sm sm:text-base">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                   <span className="ml-2 text-gray-600">5.0</span>
                 </div>
-                <p className="italic text-gray-800 mb-4">
+                <p className="italic text-gray-800 mb-4 text-sm sm:text-base">
                   &quot;Chef Will&apos;s passion for Puerto Rican cuisine shines through in every dish. A must-visit in Fredericksburg!&quot;
                 </p>
                 <p className="text-sm text-gray-600">- John D.</p>
