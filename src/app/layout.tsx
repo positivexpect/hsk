@@ -29,13 +29,18 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/logo.png",
-    },
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    shortcut: "/icon.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      { rel: "apple-touch-icon", url: "/apple-icon.png" },
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#E41F1D" }
+    ],
   },
   openGraph: {
     type: "website",
