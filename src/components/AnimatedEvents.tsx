@@ -73,7 +73,7 @@ const AnimatedEvents: React.FC = () => {
               <h2 className="text-2xl font-bold mb-4 text-[#0F47AF]">Food Truck Events</h2>
               <p className="text-gray-800 mb-6">
                 Bring the excitement of our food truck to your next event! Perfect for
-                corporate functions, weddings, festivals, and private parties. We'll
+                corporate functions, weddings, festivals, and private parties. We&apos;ll
                 serve up fresh, authentic Puerto Rican cuisine that your guests will love.
               </p>
               <ul className="space-y-3 text-gray-600">
