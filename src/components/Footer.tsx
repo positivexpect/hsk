@@ -88,10 +88,30 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-200/20 text-center text-gray-200">
-          <p>
-            &copy; {new Date().getFullYear()} Hit The Spot Kitchen. All rights
-            reserved.
+        <div className="mt-8 pt-8 border-t border-gray-200/20 text-center text-gray-200 flex flex-col">
+          <p className="flex flex-col">
+            <span>
+              &copy; {new Date().getFullYear()} Oro Aevora. All rights reserved.
+            </span>
+            <div className="relative flex flex-col mt-5">
+              <div className="text-center py-5 bg-gray-800 rounded-lg">
+                <a
+                  href="https://www.oroaevora.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="no-underline text-yellow-400 hover:text-yellow-300 transition-colors"
+                >
+                  <span className="font-bold font-sans text-base block mb-2">
+                    Website Built By
+                  </span>
+                  <img
+                    src="https://vcjvxayofclboaoknfdn.supabase.co/storage/v1/object/public/random//orologo.png"
+                    alt="Oro Aevora Logo"
+                    className="h-42 mx-auto"
+                  />
+                </a>
+              </div>
+            </div>
           </p>
         </div>
       </div>
