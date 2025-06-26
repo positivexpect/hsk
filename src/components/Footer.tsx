@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200/20 text-center text-gray-200 flex flex-col">
-          <p className="flex flex-col">
+          <div className="flex flex-col">
             <span>
               &copy; {new Date().getFullYear()} Oro Aevora. All rights reserved.
             </span>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
