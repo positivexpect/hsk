@@ -271,7 +271,13 @@ export default function AnimatedMenu() {
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0F47AF] mb-8 sm:mb-16">
               Full Menu
             </h2>
-            {["Appetizers", "Main Dishes", "Sides"].map((category) => (
+            {[
+              "Frituras (Fried Foods)",
+              "WEPA Rice Bowls",
+              "Mofongo",
+              "Sides",
+              "Desserts",
+            ].map((category) => (
               <motion.div
                 key={category}
                 initial={{ opacity: 0, y: 20 }}
