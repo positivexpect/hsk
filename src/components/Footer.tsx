@@ -94,7 +94,10 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Oro Aevora. All rights reserved.
             </span>
             <div className="relative flex flex-col mt-5">
-              <div className="text-center py-5 bg-gray-800 rounded-lg">
+              <div
+                className="text-center pb-2 bg-gray-800 rounded-lg mx-auto"
+                style={{ margin: "0 494px 2px 518px" }}
+              >
                 <a
                   href="https://www.oroaevora.com"
                   target="_blank"
