@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa';
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaYelp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -18,22 +18,34 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/menu" className="text-gray-200 hover:text-white transition-colors">
+                <Link
+                  href="/menu"
+                  className="text-gray-200 hover:text-white transition-colors"
+                >
                   Menu
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-200 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-200 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="text-gray-200 hover:text-white transition-colors">
+                <Link
+                  href="/events"
+                  className="text-gray-200 hover:text-white transition-colors"
+                >
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-200 hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-gray-200 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -42,9 +54,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Hours</h4>
             <ul className="text-gray-200 space-y-2">
-              <li>Monday - Thursday: 11am - 9pm</li>
-              <li>Friday - Saturday: 11am - 10pm</li>
-              <li>Sunday: 12pm - 8pm</li>
+              <li>Monday - Friday: 11am - 9pm</li>
+              <li>Saturday - Sunday: 12pm - 10pm</li>
             </ul>
           </div>
           <div>
@@ -78,7 +89,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200/20 text-center text-gray-200">
-          <p>&copy; {new Date().getFullYear()} Hit The Spot Kitchen. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Hit The Spot Kitchen. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
