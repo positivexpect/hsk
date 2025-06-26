@@ -254,45 +254,6 @@ export default function AnimatedMenu() {
           </div>
 
           <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-12"
-          >
-            {Object.entries(menuItems2).map(([category, items]) => (
-              <motion.div
-                key={category}
-                variants={item}
-                className="bg-white rounded-lg shadow-md p-6"
-              >
-                <h2 className="text-2xl font-bold mb-6 text-red-600">
-                  {category}
-                </h2>
-                <div className="space-y-6">
-                  {items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="flex justify-between items-start"
-                    >
-                      <div>
-                        <h3 className="font-semibold text-gray-900">
-                          {item.name}
-                        </h3>
-                        <p className="text-gray-600 text-sm mt-1">
-                          {item.description}
-                        </p>
-                      </div>
-                      <span className="text-gray-900 font-medium">
-                        {item.price}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
